@@ -1,0 +1,40 @@
+@import "../scss/base/variables";
+
+
+.logo {
+    width: 150px;
+}
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color: $grey;
+}
+
+.menu {
+    display: flex;
+    color: white;
+    &__item {
+        border-radius: 3px;
+        margin: 0 5px;
+        span {
+            font: 16px $font;
+            text-transform: uppercase;
+            margin-left: 10px;
+            
+        }
+        &--active {
+            background-color: $blue;
+        }
+    }
+}
+
+.dropdown {
+    color: white;
+    &__item {
+        span {
+            font-family: $font;
+        text-transform: uppercase;
+        }
+    }
+}

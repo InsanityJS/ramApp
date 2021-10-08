@@ -1,33 +1,43 @@
-<mat-toolbar color="accent">
-    hello
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-    </button>
-    <span>My App</span>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>share</mat-icon>
-    </button>
+<mat-toolbar color="accent" class="header">
+    <img class="logo" src="../assets/images/logo.svg" alt="Rick and Morty Logo">
+    
+  <ul class="menu">
+      <li class="menu__item" routerLink="/characters" routerLinkActive="menu__item--active" >
+          <button mat-button >
+              <mat-icon>people_alt</mat-icon>
+            <span>Characters</span>
+          </button>
+      </li>
+      <li class="menu__item" routerLink="/locations" routerLinkActive="menu__item--active" >
+        <button mat-button >
+            <mat-icon>share_location</mat-icon>
+          <span>Locations</span>
+        </button>
+    </li>
+    <li class="menu__item" routerLink="/episodes" routerLinkActive="menu__item--active" >
+        <button mat-button >
+            <mat-icon>live_tv</mat-icon>
+          <span>Episodes</span>
+        </button>
+    </li>
+  </ul>
 
-    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+  <div class="dropdown">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
         <mat-icon>more_vert</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-            <mat-icon>dialpad</mat-icon>
-            <span>Redial</span>
-        </button>
-        <button mat-menu-item disabled>
-            <mat-icon>voicemail</mat-icon>
-            <span>Check voice mail</span>
-        </button>
-        <button mat-menu-item>
-            <mat-icon>notifications_off</mat-icon>
-            <span>Disable alerts</span>
+        <button mat-menu-item class="dropdown__item">
+            <mat-icon>login</mat-icon>
+            <span>Login</span>
         </button>
     </mat-menu>
-
+  </div>
 </mat-toolbar>
+
+<div class="container">
+
+    <router-outlet>
+
+    </router-outlet>
+</div>

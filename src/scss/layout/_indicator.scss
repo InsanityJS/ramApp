@@ -1,0 +1,13 @@
+.indicator {
+    @include size(10px);
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 3px;
+    &.alive {
+        background-color: #1dcc1d;
+    }
+    &.dead {
+        background-color: red;
+    }
+}

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { CHARACTERS, ICharacter } from '../../models/characters.model';
+import { ApiService } from '../../services/api.service';
+import { ICharacter, StatusEnum} from '../../models/characters.model';
+
 
 @Component({
   selector: 'characters',
@@ -7,10 +9,19 @@ import { CHARACTERS, ICharacter } from '../../models/characters.model';
   styleUrls: ['./characters.component.scss']
 })
 export class CharactersComponent implements OnInit {
-  public characters: ICharacter[] = CHARACTERS;
-  constructor() { }
+  public characters: ICharacter[] = [];
+  public statusEnum = StatusEnum;
+
+
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.getCharacters();
+  }
+  public getCharacters(): void {
+    this.apiService.getCharactarsList().subscribe((characters: any) => {
+      this.characters = characters.results;
+    }, error => alert('Something went wrong!'));
   }
 
   public showEpisodes(episodes: string[]) {

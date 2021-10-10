@@ -12,7 +12,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  public getCharactarsList() {
-    return this.http.get(`${API.server}/character`);
+  public getCharactarsList(page: number) {
+    return this.http.get(`${API.server}/character/?page=${page}`);
   }
 }

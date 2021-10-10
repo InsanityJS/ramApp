@@ -1,0 +1,14 @@
+.pages {
+    margin-bottom: 20px;
+    display: inline-block;
+    display: flex;
+    justify-content: flex-end;
+    .mat-paginator-page-size {
+        display: none;
+    }
+    .mat-paginator {
+        background-color: $grey;
+        color: #fff;
+        display: inline-block;
+    }
+}

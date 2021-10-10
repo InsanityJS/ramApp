@@ -1,5 +1,10 @@
 <h1 class="title">Characters</h1>
 
+<div class="pages">
+  <mat-paginator [length]="length" [pageSize]="pageSize" (page)="getCharacters($event.pageIndex + 1)"
+    aria-label="Select page">
+  </mat-paginator>
+</div>
 
 <div class="card-wraper">
   <mat-card *ngFor="let person of characters" class="card">

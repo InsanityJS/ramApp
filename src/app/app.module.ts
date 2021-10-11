@@ -10,13 +10,15 @@ import { AppComponent } from './app.component';
 import { CharactersComponent } from './components/characters/characters.component';
 import { LocationsComponent } from './components/locations/locations.component';
 import { EpisodesComponent } from './components/episodes/episodes.component';
+import { EpisodesWindowComponent } from './components/episodes-window/episodes-window.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharactersComponent,
     LocationsComponent,
-    EpisodesComponent
+    EpisodesComponent,
+    EpisodesWindowComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +26,9 @@ import { EpisodesComponent } from './components/episodes/episodes.component';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule
+  ],
+  entryComponents: [
+    EpisodesWindowComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

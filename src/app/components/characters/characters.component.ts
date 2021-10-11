@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { ICharacter, StatusEnum} from '../../models/characters.model';
+import { LoadingService } from 'src/app/services/loading.service';
+import { MatDialog } from '@angular/material/dialog';
+import { EpisodesWindowComponent } from '../episodes-window/episodes-window.component';
 
 
 @Component({
@@ -11,27 +14,38 @@ import { ICharacter, StatusEnum} from '../../models/characters.model';
 export class CharactersComponent implements OnInit {
   public characters: ICharacter[] = [];
   public statusEnum = StatusEnum;
-  public length = 0;
-  public pageSize = 20;
-  //pageEvent: PageEvent;
+  public length: number = 0;
+  public pageSize: number = 20;
+  public loading: boolean = false;
+  
 
-
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService, 
+              private loadingService: LoadingService, 
+              private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.getCharacters(1);
   }
   public getCharacters(page: number): void {
+    this.loading = this.loadingService.start();
     this.apiService.getCharactarsList(page).subscribe((characters: any) => {
       this.characters = characters.results;
       this.length = characters.info.count;
+
+      setTimeout(() => {
+        this.loading = this.loadingService.stop();
+      }, 500
+      )
     }, 
     error => alert('Something went wrong!'));
     
   }
 
   public showEpisodes(episodes: string[]) {
-    console.log(episodes);
+    this.dialog.open(EpisodesWindowComponent, {
+      width: '500px',
+      data: episodes
+    });
   }
 
 }

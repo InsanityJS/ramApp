@@ -1,0 +1,14 @@
+.loading {
+    &::before {
+        background-color: #fff;
+        opacity: 0.8;
+        z-index: 98;
+    }
+}
+.mat-progress-spinner {
+    @include align(true, true, fixed !important);
+    z-index: 99;
+    circle {
+        stroke: $blue;
+    }
+}

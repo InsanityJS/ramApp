@@ -6,6 +6,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatDialogModule } from '@angular/material/dialog';
 
 const MATERIALMODULES = [
   MatToolbarModule,
@@ -13,7 +15,9 @@ const MATERIALMODULES = [
   MatIconModule,
   MatMenuModule,
   MatCardModule,
-  MatPaginatorModule
+  MatPaginatorModule,
+  MatProgressSpinnerModule,
+  MatDialogModule
 ];
 
 @NgModule({

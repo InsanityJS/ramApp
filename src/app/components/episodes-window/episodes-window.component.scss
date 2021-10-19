@@ -1,6 +1,7 @@
 @import "../../../scss/styles.scss";
 .window {
     position: relative;
+    min-height: 80vh;
     &__close {
         @include pos($r: 0, $t: 0);
         cursor: pointer;

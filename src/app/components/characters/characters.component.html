@@ -3,8 +3,20 @@
 
 <h1 class="title">Characters</h1>
 
+<div class="filter-wrap">
+  <filter-characters [criteria]="searchCriteria"></filter-characters>
+
+  <button mat-raised-button (click)="getCharacters(1, searchCriteria)">
+    Filter
+  </button>
+
+  <button mat-raised-button (click)="searchCriteria = {}">
+    Clear
+  </button>
+</div>
+
 <div class="pages">
-  <mat-paginator [length]="length" [pageSize]="pageSize" (page)="getCharacters($event.pageIndex + 1)"
+  <mat-paginator [length]="length" [pageSize]="pageSize" (page)="getCharacters($event.pageIndex + 1, searchCriteria)"
     aria-label="Select page">
   </mat-paginator>
 </div>

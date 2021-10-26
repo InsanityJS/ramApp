@@ -1,0 +1,18 @@
+{
+    "HERO_CHARACTERS": "Characters",
+    "HERO_LOCATIONS": "Location",
+    "HERO_EPISODES": "Episodes",
+    "HERO_LOGIN": "Login",
+
+    "LABEL_CLEAR": "Clear",
+    "LABEL_FILTER": "Filter",
+    "LABEL_LAST_KNOW": "Last known location",
+    "LABEL_SHOW_EPISODES": "Show list episodes",
+    "LABEL_FILTER_SPECIES": "Species",
+    "LABEL_FILTER_STATUS": "Status",
+    "LABEL_FILTER_NAME": "Name",
+    "LABEL_FILTER_GENDER": "Gender"
+
+
+
+}

@@ -1,6 +1,5 @@
 @import "../scss/base/variables";
 
-
 .logo {
     width: 150px;
 }
@@ -21,7 +20,6 @@
             font: 16px $font;
             text-transform: uppercase;
             margin-left: 10px;
-            
         }
         &--active {
             background-color: $blue;
@@ -34,7 +32,7 @@
     &__item {
         span {
             font-family: $font;
-        text-transform: uppercase;
+            text-transform: uppercase;
         }
     }
 }

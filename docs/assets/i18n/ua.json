@@ -1,0 +1,15 @@
+{
+    "HERO_CHARACTERS": "Персонажі",
+    "HERO_LOCATIONS": "Місця",
+    "HERO_EPISODES": "Серії",
+    "HERO_LOGIN": "Увійти",
+
+    "LABEL_CLEAR": "Очистити",
+    "LABEL_FILTER": "Фільтер",
+    "LABEL_LAST_KNOWN": "Остання відоме місцезнаходження",
+    "LABEL_SHOW_EPISODES": "Список серій",
+    "LABEL_FILTER_SPECIES": "Вид",
+    "LABEL_FILTER_STATUS": "Статус",
+    "LABEL_FILTER_NAME": "Ім'я",
+    "LABEL_FILTER_GENDER": "Стать"
+}

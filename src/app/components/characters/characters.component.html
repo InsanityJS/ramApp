@@ -1,17 +1,17 @@
 <mat-progress-spinner mode='indeterminate' diameter="40" *ngIf="loading">
 </mat-progress-spinner>
 
-<h1 class="title">Characters</h1>
+<h1 class="title">{{'HERO_CHARACTERS' | translate}}</h1>
 
 <div class="filter-wrap">
   <filter-characters [criteria]="searchCriteria"></filter-characters>
 
   <button mat-raised-button (click)="getCharacters(1, searchCriteria)">
-    Filter
+    {{'LABEL_FILTER' | translate}}
   </button>
 
   <button mat-raised-button (click)="searchCriteria = {}">
-    Clear
+    {{'LABEL_CLEAR' | translate}}
   </button>
 </div>
 
@@ -41,13 +41,13 @@
 
     <mat-card-content>
       <p>
-        <span>Last know location: {{person.location.name}} </span>
+        <span>{{'LABEL_LAST_KNOWN' | translate}}: {{person.location.name}} </span>
       </p>
     </mat-card-content>
 
     <mat-card-actions>
       <button mat-raised-button class="card__btn" (click)="showEpisodes(person.episode)">
-        Show list episodes
+        {{'LABEL_SHOW_EPISODES' | translate}}
       </button>
 
     </mat-card-actions>

@@ -27,8 +27,12 @@ export class ApiService {
     return this.http.get(url);
   }
 
+  public getEpisodesList(page: number){
+    return this.http.get(`${API.server}/episode?page=${page}`);
+  }
+
   public getEpisodesFromUrl(episodes: string[]): IEpisode[] {
-    let list: IEpisode[] = [];
+    let list: any = [];
 
      episodes.forEach((episode: string) => {
        this.http.get(episode).subscribe((data: any) => {
@@ -40,6 +44,8 @@ export class ApiService {
         });
        });
      });
+
+     list.sort((a: any, b: any) => a.id > b.id);
      return list;
   } 
 }

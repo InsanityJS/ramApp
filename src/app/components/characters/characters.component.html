@@ -6,13 +6,17 @@
 <div class="filter-wrap">
   <filter-characters [criteria]="searchCriteria"></filter-characters>
 
-  <button mat-raised-button (click)="getCharacters(1, searchCriteria)">
-    {{'LABEL_FILTER' | translate}}
-  </button>
 
-  <button mat-raised-button (click)="searchCriteria = {}">
-    {{'LABEL_CLEAR' | translate}}
-  </button>
+  <div class="filter-wrap__btns">
+    <button mat-raised-button (click)="getCharacters(1, searchCriteria)">
+      {{'LABEL_FILTER' | translate}}
+    </button>
+
+    <button mat-raised-button (click)="searchCriteria = {}">
+      {{'LABEL_CLEAR' | translate}}
+    </button>
+  </div>
+
 </div>
 
 <div class="pages">

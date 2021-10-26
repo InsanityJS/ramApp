@@ -1,0 +1,17 @@
+@import "../../../scss/base/variables";
+
+.episodes {
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    .episode {
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    a {
+        font-family: $font;
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none;
+    }
+}

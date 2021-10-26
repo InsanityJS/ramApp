@@ -23,3 +23,17 @@
         text-transform: uppercase;
     }
 }
+.filter-wrap {
+    text-align: right;
+    &__btns {
+        text-align: right;
+        margin-bottom: 10px;
+        button {
+            background-color: $grey;
+            margin-right: 10px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

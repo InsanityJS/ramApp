@@ -1,0 +1,11 @@
+//.filter {
+//    width: 100%;
+//    text-align: center;
+//}
+
+mat-form-field {
+    margin-right: 10px;
+    &:last-child {
+        margin-right: 0;
+    }
+}

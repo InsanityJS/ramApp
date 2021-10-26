@@ -9,7 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent {
   constructor(public translate: TranslateService) {
     translate.addLangs(['en', 'ua']);
-    translate.use('ua');
+    translate.use('en');
   }
   public switchLang(lang: string) {
     this.translate.use(lang);
